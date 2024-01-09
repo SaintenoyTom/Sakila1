@@ -6,11 +6,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-
-class CountryServiceTest {
+@SpringBootTest
+class CityServiceTest {
 
     @Autowired
-    CountryService service;
+    CityService service;
 
     @Test
     void read() {
@@ -19,5 +19,17 @@ class CountryServiceTest {
     @Test
     void readAll() {
         service.readAll().stream().forEach(c-> System.out.println(c));
+    }
+
+    @Test
+    void create() {
+    }
+
+    @Test
+    void update() {
+    }
+
+    @Test
+    void delete() {
     }
 }
