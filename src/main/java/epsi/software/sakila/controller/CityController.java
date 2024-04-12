@@ -22,4 +22,8 @@ public class CityController {
     public City getById(@PathVariable Long id) {
         return cityService.read(id);
     }
+    @GetMapping("/text/{text}")
+    public List<City> getByText(@PathVariable String text) {
+        return cityService.readWithText(text);
+    }
 }

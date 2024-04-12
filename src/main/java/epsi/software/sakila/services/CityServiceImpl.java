@@ -26,6 +26,11 @@ public class CityServiceImpl implements CityService{
     }
 
     @Override
+    public List<City> readWithText(String text) {
+        return cityRepository.findByCityContaining(text);
+    }
+
+    @Override
     public City Create(City city) {
         return cityRepository.save(city);
     }
